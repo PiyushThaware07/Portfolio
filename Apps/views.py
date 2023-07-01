@@ -1,5 +1,10 @@
 from django.shortcuts import render,HttpResponse
 
+# DataBase
+from . models import *
+
+
 # Create your views here.
 def index(request):
-    return render(request=request,template_name="Index.html")
+    education_details = Education.objects.all()
+    return render(request,"Index.html",locals())
