@@ -1,0 +1,52 @@
+<style>
+    .social {
+        position: absolute;
+        float: right;
+        right: 40px;
+        bottom: 40px;
+        height: 55px;
+        width: 55px;
+    }
+</style>
+<div id="social-menu" style="display: none;">
+    <a href="" target="_blank">
+        <button class="social btn btn-light text-primary rounded-circle shadow-lg" style="margin-bottom: 280px;">
+            <i class="fa-brands fa-facebook"></i>
+        </button>
+    </a>
+    <a href="" target="_blank">
+        <button class="social btn btn-light text-danger rounded-circle shadow-lg" style="margin-bottom: 210px;">
+            <i class="fa-brands fa-instagram"></i>
+        </button>
+    </a>
+    <a href="" target="_blank">
+        <button class="social btn btn-light text-black rounded-circle shadow-lg" style="margin-bottom: 140px;">
+            <i class="fa-brands fa-github"></i>
+        </button>
+    </a>
+    <a href="" target="_blank">
+        <button class="social btn btn-light text-warning rounded-circle shadow-lg" style="margin-bottom: 70px;">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </button>
+    </a>
+
+</div>
+<button class="social btn btn-light text-primary rounded-circle shadow" id="social" onclick="social()">
+    <i class="fa-solid fa-share-nodes" id="social-icon"></i>
+</button>
+
+<script>
+    function social() {
+        console.log("Social Clicked");
+        if (document.getElementById("social-icon").className === "fa-solid fa-share-nodes") {
+            let icon = document.getElementById("social-icon").className = "fa-solid fa-xmark";
+            let menu = document.getElementById("social-menu");
+            menu.setAttribute('style', 'display:block !important');
+        }
+        else {
+            let icon = document.getElementById("social-icon").className = "fa-solid fa-share-nodes";
+            let menu = document.getElementById("social-menu");
+            menu.setAttribute('style', 'display:none !important');
+        }
+    }
+</script>
