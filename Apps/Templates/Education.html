@@ -142,9 +142,11 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">{{education.startyear}} - {{education.endyear}}</div>
                 <div class="timeline-content">
-                    <h3>{{education.degree}}</h3>
-                    <p class="text-capitalize">{{education.institutionname}}</p>
-                    <p class="text-capitalize">{{education.fieldofstudy}}</p>
+                    <div class="text-start">
+                        <h3>{{education.degree}}</h3>
+                        <p class="text-capitalize">{{education.institutionname}}</p>
+                        <p class="text-capitalize">{{education.fieldofstudy}}</p>
+                    </div>
                 </div>
             </div>
             {% endfor %}

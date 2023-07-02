@@ -136,22 +136,19 @@
 
     <section class="timeline-section">
         <div class="timeline-items">
+            {% for experience in experience_details %}
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">2015</div>
+                <div class="timeline-date">{{experience.fromdate}} - {{experience.todate}}</div>
                 <div class="timeline-content" data-aos="fade-right">
-                    <h3>Timeline Item Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, aliquam!</p>
+                    <div class="text-start">
+                        <h3>{{experience.companyname}}</h3>
+                    <p class="p-0 m-0">Job Title : {{experience.jobtitle}}</p>
+                    <p class="p-0 m-0">Location : {{experience.location}}</p>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item" >
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2016</div>
-                <div class="timeline-content" data-aos="fade-left">
-                    <h3>Timeline Item Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, aliquam!</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 
