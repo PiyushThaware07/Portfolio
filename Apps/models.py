@@ -23,3 +23,13 @@ class Experience(models.Model):
     iscurrentjob = models.BooleanField(default=False)
     def __str__(self):
         return self.jobtitle
+
+class Contact(models.Model):
+    contact_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=30, blank=False)
+    email = models.EmailField(blank=False)
+    message = models.TextField()
+    datetime = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return f"{self.name}"
+    
