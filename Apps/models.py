@@ -1,4 +1,6 @@
 from django.db import models
+# Tags
+from taggit.managers import TaggableManager
 
 # Create your models here.
 class Education(models.Model):
@@ -30,7 +32,8 @@ class Project(models.Model):
     url = models.URLField(blank=True)
     imageurl = models.ImageField(upload_to='project/')
     summary = models.TextField(blank=False)
-    duration = models.DurationField()
+    duration = models.IntegerField(blank=False)
+    technologyused = TaggableManager()
     def __str__(self):
         return self.name
     

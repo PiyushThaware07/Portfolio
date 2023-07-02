@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mx-auto p-3 p-md-5">
-                <div class="card p-3 p-md-5 border-0 shadow-sm">
+                <div class="card p-3 p-md-5 border-0 " style=" box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.135);">
                     <div class="card-body">
                         <h4 class="text-capitalize">Get in <span class="text-primary">touch</span> with me</h4>
                         <form action="{% url 'contact' %}" method="post" id="post-form">
@@ -82,11 +82,10 @@
                 success: function (response) {
                     console.log(response);
                     $('#thanksMeBox').show();
-                    $('#sendBtn').hide();
                     let startTimeOut = setTimeout(() => {
                         console.log("timeout begin");
                         $('#thanksMeBox').hide();
-                    }, 6000);
+                    }, 7000);
                 }
             })
         })

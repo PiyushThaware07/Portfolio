@@ -9,6 +9,7 @@ from . models import *
 def index(request):
     education_details = Education.objects.all()
     experience_details = Experience.objects.all()
+    project_details = Project.objects.all()
     return render(request,"Index.html",locals())
 
 def contact(request):
