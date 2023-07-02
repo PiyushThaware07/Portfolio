@@ -24,6 +24,18 @@ class Experience(models.Model):
     def __str__(self):
         return self.jobtitle
 
+class Project(models.Model):
+    project_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=245,blank=False)
+    url = models.URLField(blank=True)
+    imageurl = models.ImageField(upload_to='project/')
+    summary = models.TextField(blank=False)
+    duration = models.DurationField()
+    def __str__(self):
+        return self.name
+    
+
+
 class Contact(models.Model):
     contact_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30, blank=False)
