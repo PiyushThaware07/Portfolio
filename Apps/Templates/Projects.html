@@ -87,7 +87,7 @@
                                 <small  style="font-family: 'Ysabeau SC', sans-serif;font-weight: bold;letter-spacing: 4px;text-align: start;">Technology Used</small>
                                 <br>
                                 {% for tag in project.technologyused.all|slice:":4" %}
-                                <button class="btn btn-sm btn-light" disabled>{{ tag.name }}</button>
+                                <button class="btn btn-sm btn-light text-capitalize" disabled>{{ tag.name }}</button>
                                 {% endfor %}
                                 <hr>
                                 <small  style="font-family: 'Ysabeau SC', sans-serif;font-weight: bold;letter-spacing: 4px;text-align: start;">Duration : {{project.duration}} Month</small>

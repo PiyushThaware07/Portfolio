@@ -10,6 +10,7 @@ def index(request):
     education_details = Education.objects.all()
     experience_details = Experience.objects.all()
     project_details = Project.objects.all()
+    portfolio_details = Portfolio.objects.all()
     return render(request,"Index.html",locals())
 
 def contact(request):

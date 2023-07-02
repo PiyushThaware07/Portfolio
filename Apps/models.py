@@ -47,4 +47,21 @@ class Contact(models.Model):
     datetime = models.DateTimeField(auto_now=True)
     def __str__(self):
         return f"{self.name}"
+
+class Portfolio(models.Model):
+    firstName = models.CharField(max_length=254,blank=False)
+    lastName = models.CharField(max_length=254,blank=False)
+    profilePictureUrl = models.FileField(upload_to="portfolio/",blank=True)
+    description = models.TextField(blank=False)
+    short_desc = models.TextField(blank=False)
+    # Social Media
+    facebook_url = models.URLField(blank=False)
+    instagram_url = models.URLField(blank=False)
+    snapchat_url = models.URLField(blank=False)
+    github_url = models.URLField(blank=False)
+    linkedin_url = models.URLField(blank=False)
+    email_url = models.URLField(blank=False)
+
+    def __str__(self):
+        return f"{self.firstName} {self.lastName}"
     
