@@ -27,6 +27,11 @@ def index(request):
     email_url = portfolio_instance.email_url
     # CV
     cv_url = portfolio_instance.cv_url
+
+    # Strength , Future Goal, why hire
+    hire_details = WhyHire.objects.all()
+    strength_details = Strength.objects.all()
+    goals_details = FutureGoals.objects.all()
     return render(request,"Index.html",locals())
 
 def contact(request):

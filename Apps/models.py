@@ -67,3 +67,12 @@ class Portfolio(models.Model):
     def __str__(self):
         return f"{self.firstName} {self.lastName}"
     
+class WhyHire(models.Model):
+    reason = models.CharField( max_length=254)
+
+class Strength(models.Model):
+    strength = models.CharField( max_length=254)
+
+class FutureGoals(models.Model):
+    goal = models.CharField( max_length=254)
+

@@ -56,12 +56,13 @@
                     Why you should hire me ?
                 </h3>
                 <ul>
-                    <li>I am highly adaptable and quick to learn.</li>
-                    <li>I am dedicated, committed, and motivated to achieve excellence in my work.</li>
-                    <li>I believe in the power of teamwork and collaboration,According to me teamwork is everything.
-                    </li>
-                    <li>I possess strong analytical and problem-solving abilities. </li>
-                    <li>I maintain a positive and optimistic outlook, even in challenging situations.</li>
+                    {% if hire_details %}
+                    {% for item in hire_details %}
+                    <li>{{item.reason}}</li>
+                    {% endfor %}
+                    {% else %}
+                    <li>No Reason</li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -72,11 +73,13 @@
                     What are my strengths
                 </h3>
                 <ul>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
+                    {% if strength_details %}
+                    {% for item in strength_details %}
+                    <li>{{item.strength}}</li>
+                    {% endfor %}
+                    {% else %}
+                    <li>No Strength</li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="col-md-5"
@@ -93,11 +96,13 @@
                     Future Goals
                 </h3>
                 <ul>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum.</li>
+                    {% if goals_details %}
+                    {% for item in goals_details %}
+                    <li>{{item.goal}}</li>
+                    {% endfor %}
+                    {% else %}
+                    <li>No Goals</li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
