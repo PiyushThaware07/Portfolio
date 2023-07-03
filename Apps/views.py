@@ -7,9 +7,11 @@ from . models import *
 
 # Create your views here.
 def index(request):
+    print("starting server....")
     education_details = Education.objects.all()
     experience_details = Experience.objects.all()
     project_details = Project.objects.all()
+    print("Getting all the data from server...")
 
     # Portfolio
     portfolio_instance = Portfolio.objects.first()
@@ -32,6 +34,7 @@ def index(request):
     hire_details = WhyHire.objects.all()
     strength_details = Strength.objects.all()
     goals_details = FutureGoals.objects.all()
+    print("Server started...")
     return render(request,"Index.html",locals())
 
 def contact(request):
