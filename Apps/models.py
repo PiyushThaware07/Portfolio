@@ -51,6 +51,7 @@ class Contact(models.Model):
 class Portfolio(models.Model):
     firstName = models.CharField(max_length=254,blank=False)
     lastName = models.CharField(max_length=254,blank=False)
+    fullName = models.CharField(max_length=254,blank=False)
     profilePictureUrl = models.FileField(upload_to="portfolio/",blank=True)
     description = models.TextField(blank=False)
     short_desc = models.TextField(blank=False)
@@ -61,6 +62,7 @@ class Portfolio(models.Model):
     github_url = models.URLField(blank=False)
     linkedin_url = models.URLField(blank=False)
     email_url = models.URLField(blank=False)
+    cv_url = models.FileField(upload_to="Resume/",blank=True)
 
     def __str__(self):
         return f"{self.firstName} {self.lastName}"
